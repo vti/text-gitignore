@@ -23,6 +23,7 @@ sub match_gitignore {
 
         if ($pattern =~ s/^!//) {
             push @neg, qr/$pattern/;
+            next;
         }
 
         if ($pattern =~ s/^\/// || $pattern !~ m/\//) {
@@ -48,7 +49,7 @@ sub match_gitignore {
             }
 
             if ($matched && grep { $file =~ $_ } @neg) {
-                next;
+                last;
             }
 
             if ($matched) {
