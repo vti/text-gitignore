@@ -71,15 +71,18 @@ __END__
 
 =head1 NAME
 
-Text::Gitignore - It's new $module
+Text::Gitignore - Match .gitignore patterns
 
 =head1 SYNOPSIS
 
-    use Text::Gitignore;
+    use Text::Gitignore qw(match_gitignore);
+
+    my @matched_files = match_gitignore(['pattern1', 'pattern2/*'], @files);
 
 =head1 DESCRIPTION
 
-Text::Gitignore is ...
+Text::Gitignore matches `.gitignore` patterns. It combines L<Text::Glob> and
+L<File::FnMatch> functionality with several `.gitignore`-specific tweaks.
 
 =head1 LICENSE
 

@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Match .gitignore patterns",
    "author" : [
-      "vti <viacheslav.t@gmail.com>"
+      "Viacheslav Tykhanovskyi <viacheslav.t@gmail.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v2.1.1, CPAN::Meta::Converter version 2.142060",
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "File::FnMatch" : "0",
+            "Text::Glob" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,6 +54,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/vti/text-gitignore/issues"
+      },
+      "homepage" : "https://github.com/vti/text-gitignore",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/vti/text-gitignore.git",
+         "web" : "https://github.com/vti/text-gitignore"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:VTI"
 }
