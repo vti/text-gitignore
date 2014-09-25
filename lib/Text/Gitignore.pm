@@ -12,6 +12,7 @@ use File::FnMatch ();
 sub match_gitignore {
     my ($patterns, @files) = @_;
 
+    my @neg;
     my @re;
     foreach my $pattern (@$patterns) {
         next if $pattern eq '';
@@ -19,6 +20,10 @@ sub match_gitignore {
 
         $pattern =~ s{(?:(?<!\\) )+$}{};
         $pattern =~ s{(?:\\ )+$}{ };
+
+        if ($pattern =~ s/^!//) {
+            push @neg, qr/$pattern/;
+        }
 
         if ($pattern =~ s/^\/// || $pattern !~ m/\//) {
             push @re, Text::Glob::glob_to_regex($pattern);
@@ -42,7 +47,14 @@ sub match_gitignore {
                 $matched++ if $file =~ $re;
             }
 
-            push @matched, $file if $matched;
+            if ($matched && grep { $file =~ $_ } @neg) {
+                next;
+            }
+
+            if ($matched) {
+                push @matched, $file;
+                last;
+            }
         }
     }
 
