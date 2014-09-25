@@ -10,8 +10,8 @@ Text::Gitignore - Match .gitignore patterns
 
 # DESCRIPTION
 
-Text::Gitignore matches \`.gitignore\` patterns. It combines [Text::Glob](https://metacpan.org/pod/Text::Glob) and
-[File::FnMatch](https://metacpan.org/pod/File::FnMatch) functionality with several \`.gitignore\`-specific tweaks.
+Text::Gitignore matches `.gitignore` patterns. It combines [Text::Glob](https://metacpan.org/pod/Text::Glob) and
+[File::FnMatch](https://metacpan.org/pod/File::FnMatch) functionality with several `.gitignore`-specific tweaks.
 
 # LICENSE
 

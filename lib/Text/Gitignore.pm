@@ -81,8 +81,8 @@ Text::Gitignore - Match .gitignore patterns
 
 =head1 DESCRIPTION
 
-Text::Gitignore matches `.gitignore` patterns. It combines L<Text::Glob> and
-L<File::FnMatch> functionality with several `.gitignore`-specific tweaks.
+Text::Gitignore matches C<.gitignore> patterns. It combines L<Text::Glob> and
+L<File::FnMatch> functionality with several C<.gitignore>-specific tweaks.
 
 =head1 LICENSE
 
