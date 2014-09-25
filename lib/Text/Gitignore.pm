@@ -30,6 +30,8 @@ sub match_gitignore {
             push @re, Text::Glob::glob_to_regex($pattern);
         }
         else {
+            $pattern =~ s{/$}{/*};
+
             push @re, sub {
                 File::FnMatch::fnmatch($pattern, $_[0],
                     &File::FnMatch::FNM_PATHNAME);
