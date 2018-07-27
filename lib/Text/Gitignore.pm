@@ -58,8 +58,7 @@ sub build_gitignore_matcher {
     my @patterns_re;
     foreach my $pattern (@$patterns) {
         if ( $pattern =~ m/^!/ ) {
-            my $re = $build_pattern->($pattern);
-            $re =~ s{^\\!}{};
+            my $re = $build_pattern->(substr $pattern, 1);
 
             push @patterns_re,
               {
