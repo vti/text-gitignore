@@ -4,7 +4,7 @@ use warnings;
 use base 'Exporter';
 
 our @EXPORT_OK = qw(match_gitignore build_gitignore_matcher);
-our $VERSION   = "0.01";
+our $VERSION   = "0.02";
 
 sub match_gitignore {
     my ( $patterns, @paths ) = @_;
