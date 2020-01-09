@@ -50,7 +50,7 @@ sub build_gitignore_matcher {
               . ']'
         }eg;
 
-        $pattern .= '$' unless $pattern =~ m{\/$};
+        $pattern .= '(\/|$)' unless $pattern =~ m{\/$};
 
         return $pattern;
     };
