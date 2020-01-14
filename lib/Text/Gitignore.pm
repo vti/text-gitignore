@@ -167,6 +167,8 @@ it under the same terms as Perl itself.
 
 Flavio Poletti
 
+Eric A. Zarko
+
 =head1 AUTHOR
 
 Viacheslav Tykhanovskyi E<lt>viacheslav.t@gmail.comE<gt>
